@@ -1,39 +1,40 @@
-# MOZMATCH — demonstração web instalável
+# MOZMATCH — experiência web instalável
 
-Uma demonstração interativa da experiência MOZMATCH. Pode ser aberta num navegador e instalada no ecrã inicial do iPhone como PWA quando estiver publicada em HTTPS.
+MOZMATCH é uma demonstração interativa que abre no navegador e pode ser adicionada ao ecrã inicial do iPhone como PWA quando publicada em HTTPS.
 
-## Transparência da demonstração
+## Compartimentos incluídos
 
-- Todos os nomes, idades, biografias, perfis, matches e conversas são fictícios.
-- Não há criação de conta, login, recuperação de palavra-passe ou recolha de dados pessoais.
-- Mensagens e gostos são simulações locais; nada é enviado a outra pessoa.
-- Não há localização real, pagamentos, Premium ativo ou contas de utilizador.
-- O estado de demonstração fica guardado no armazenamento local do navegador e pode ser apagado em Perfil → Reiniciar demonstração.
+- **Início:** Stories, publicações com fotos, vídeo no feed e Reels.
+- **Descobrir:** perfis fictícios com fotos ilustrativas, gostos e ações de demonstração.
+- **Moz Pega-Pega:** desafio interativo de perguntas para iniciar uma conversa.
+- **Matches** e **Mensagens:** combinações e conversas simuladas, guardadas apenas neste dispositivo.
+- **Mapa:** subaba de Mensagens com mapa ilustrativo de Moçambique, seleção de cidade e mapa de ruas do OpenStreetMap.
+- **Perfil:** modo escuro, estado da demonstração e opções de localização e Premium ilustrativas.
+- **Entrada:** ecrã de boas-vindas e formulário de login demonstrativo.
 
-Esta versão mostra o aspeto e o fluxo do produto. Não é ainda o serviço de produção para ligar pessoas reais.
+## Transparência
 
-## Experiência incluída
+- Os nomes, idades, biografias, publicações, fotos, Matches e conversas são fictícios ou ilustrativos. As pessoas das fotos não são utilizadoras do MOZMATCH.
+- O formulário de login não autentica contas: qualquer e-mail e palavra-passe abrem a demonstração. O conteúdo dos campos não é enviado nem guardado.
+- O mapa usa uma cidade de demonstração; não pede nem partilha a localização do telefone.
+- Gostos, Matches e mensagens ficam no armazenamento local do navegador. Não são enviados a outras pessoas.
+- Premium de **167 MT/mês** e pagamentos por e-Mola aparecem apenas como exemplos; não há cobrança.
+- Fotos, vídeos e o mapa de ruas requerem ligação à internet. Os vídeos só começam a carregar quando são reproduzidos.
 
-- Ecrã inicial de demonstração, com identidade visual MOZMATCH.
-- Perfis fictícios de várias cidades moçambicanas, identificados como demonstração.
-- Ações de passar/gostar e matches simulados.
-- Lista de conversas fictícias e envio de mensagens guardadas apenas no dispositivo.
-- Modo escuro.
-- Estado offline e instalação como PWA no iPhone.
-- Opções Premium e localização apresentadas como exemplos, sem cobrança ou rastreamento.
+As fotografias e vídeos de exemplo são do [Pexels](https://www.pexels.com/license/). O mapa de ruas usa [OpenStreetMap](https://www.openstreetmap.org/copyright).
 
 ## Publicar no GitHub Pages
 
-Enviar para a raiz de um repositório os ficheiros desta pasta: index.html, app.js, styles.css, manifest.webmanifest, sw.js e assets/. No GitHub, abrir Settings → Pages, escolher Deploy from a branch, branch main, pasta /(root). O GitHub Pages publica o site num endereço HTTPS.
+Enviar para a raiz do repositório os ficheiros `index.html`, `app.js`, `styles.css`, `manifest.webmanifest`, `sw.js` e a pasta `assets/`. No GitHub, abrir **Settings → Pages**, escolher **Deploy from a branch**, a branch `main` e a pasta `/(root)`. O endereço publicado usa HTTPS.
 
 ## Instalar no iPhone
 
-1. Abre o endereço HTTPS no Safari. Se abriste pelo Telegram, escolhe Abrir no Safari.
-2. Toca em Partilhar e depois em Adicionar ao ecrã principal.
-3. Ativa Abrir como app web e toca em Adicionar.
+1. Abre o endereço HTTPS no Safari. Se o abriste pelo Telegram, escolhe **Abrir no Safari**.
+2. Toca em **Partilhar** e depois em **Adicionar ao ecrã principal**.
+3. Ativa **Abrir como app web** e toca em **Adicionar**.
 
-O ícone abre esta PWA em ecrã próprio. Continua a ser uma aplicação web instalada pelo navegador, não uma aplicação distribuída pela App Store.
+O ícone abre a experiência em ecrã próprio. Continua a ser uma aplicação web instalável; não é um IPA distribuído pela App Store.
 
-## Próxima etapa antes de lançar para pessoas reais
+## Próxima etapa para uso com pessoas reais
 
-Uma versão de produção precisa de backend, contas verdadeiras, regras de privacidade, armazenamento, moderação, notificações e pagamentos integrados e testados. As contas fictícias desta demonstração não representam utilizadores registados.
+Antes de receber utilizadores, é necessário ligar autenticação e recuperação de conta reais, backend, base de dados, armazenamento seguro, privacidade, moderação, notificações e pagamentos. Esta publicação é uma demonstração e não liga pessoas reais.

@@ -26,8 +26,29 @@
       <p class="welcome-copy">Descobre como o MOZMATCH aproxima pessoas e cria novas histórias.</p>
       <div class="demo-notice"><span class="demo-dot"></span><div><strong>Experiência de demonstração</strong><p>Todos os perfis e conversas são fictícios. Não precisas de criar conta nem inserir dados pessoais.</p></div></div>
       <button id="enter-demo" class="button primary welcome-cta" type="button">Explorar a demonstração <span aria-hidden="true">→</span></button>
+      <button id="open-login" class="link-button welcome-login" type="button">Já tens conta? Entrar</button>
       <p class="welcome-footnote">As tuas interações de teste ficam guardadas apenas neste dispositivo.</p>
       <button class="button ios-install-button" type="button" hidden>Como instalar no iPhone</button>
+    </section>
+  </main>
+
+  <main id="login-page" class="login-page" hidden>
+    <section class="login-card">
+      <button id="back-to-welcome" class="login-back" type="button" aria-label="Voltar ao início">‹</button>
+      <div class="welcome-brand"><img class="brand-icon" src="./assets/icon-192.png" alt=""><span>MOZ<strong>MATCH</strong></span></div>
+      <p class="eyebrow">BEM-VINDO DE VOLTA</p>
+      <h1>Entra na tua conta</h1>
+      <p class="login-copy">Continua a descobrir novas conexões.</p>
+      <form id="login-form" class="login-form">
+        <label for="login-email">E-mail</label>
+        <input id="login-email" type="email" autocomplete="username" placeholder="nome@exemplo.com" required>
+        <label for="login-password">Palavra-passe</label>
+        <input id="login-password" type="password" autocomplete="current-password" placeholder="A tua palavra-passe" required>
+        <button class="button primary login-submit" type="submit">Entrar</button>
+      </form>
+      <button id="forgot-password" class="link-button" type="button">Esqueci a palavra-passe</button>
+      <div class="login-demo-note"><strong>Acesso de demonstração</strong><span>Este formulário não envia nem guarda os dados. Qualquer e-mail e palavra-passe servem para abrir a experiência fictícia.</span></div>
+      <button id="login-guest" class="button secondary login-guest" type="button">Continuar como convidado</button>
     </section>
   </main>
 
@@ -39,14 +60,18 @@
     <section class="intro-row"><div><p class="eyebrow" id="page-kicker">A TUA PRÓXIMA HISTÓRIA COMEÇA AQUI</p><h1 id="page-title">Descobrir</h1><p id="page-subtitle" class="muted">Conhece novas pessoas à tua volta.</p></div><button id="theme-button" class="icon-button" type="button" aria-label="Alternar modo escuro">◐</button></section>
     <div class="demo-strip"><span>Perfis fictícios</span><span aria-hidden="true">·</span><span>Interações de demonstração</span><button id="demo-info" type="button" aria-label="Mais sobre esta demonstração">i</button></div>
 
-    <section id="discover-view" class="view"></section>
+    <section id="feed-view" class="view"></section>
+    <section id="discover-view" class="view" hidden></section>
     <section id="matches-view" class="view" hidden></section>
+    <section id="game-view" class="view" hidden></section>
     <section id="messages-view" class="view" hidden></section>
     <section id="account-view" class="view" hidden></section>
 
     <nav class="bottom-nav" aria-label="Navegação principal">
-      <button class="nav-button active" data-view="discover" type="button"><span>♡</span>Descobrir</button>
-      <button class="nav-button" data-view="matches" type="button"><span>✦</span>Matches</button>
+      <button class="nav-button active" data-view="feed" type="button"><span>⌂</span>Início</button>
+      <button class="nav-button" data-view="discover" type="button"><span>♡</span>Descobrir</button>
+      <button class="nav-button game-nav" data-view="game" type="button"><span>✦</span>Pega-Pega</button>
+      <button class="nav-button" data-view="matches" type="button"><span>♡</span>Matches</button>
       <button class="nav-button" data-view="messages" type="button"><span>▤</span>Mensagens</button>
       <button class="nav-button" data-view="account" type="button"><span>◎</span>Perfil</button>
     </nav>
@@ -66,6 +91,11 @@
   <dialog id="demo-info-dialog" class="install-dialog">
     <header class="chat-head"><div><p class="eyebrow">SOBRE ESTA VERSÃO</p><h2>Demonstração segura</h2></div><button class="icon-button" data-close-info type="button" aria-label="Fechar">×</button></header>
     <div class="install-steps"><p>Os nomes, idades, perfis, matches e mensagens apresentados são inventados para mostrar o funcionamento da aplicação.</p><p>Não existe registo, pagamento ou envio de mensagens nesta versão. Os gostos e mensagens que testares ficam apenas guardados neste navegador.</p></div>
+  </dialog>
+  <dialog id="story-dialog" class="story-dialog">
+    <header class="chat-head"><div><p class="eyebrow">STORY DE DEMONSTRAÇÃO</p><h2 id="story-title">Story</h2></div><button class="icon-button" data-close-story type="button" aria-label="Fechar story">×</button></header>
+    <img id="story-photo" class="story-photo" src="" alt="Fotografia ilustrativa de stock">
+    <p class="story-credit">Foto de stock do Pexels. A pessoa retratada não é utilizadora do MOZMATCH.</p>
   </dialog>
 
   <script src="./app.js"></script>
