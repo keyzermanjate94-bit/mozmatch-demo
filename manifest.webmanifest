@@ -1,0 +1,15 @@
+{
+  "name": "MOZMATCH",
+  "short_name": "MOZMATCH",
+  "description": "Conhece. Conecta. Combina. Demonstração com perfis fictícios.",
+  "lang": "pt-MZ",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f6",
+  "theme_color": "#087e75",
+  "icons": [
+    {"src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
