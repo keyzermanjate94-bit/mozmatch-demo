@@ -217,9 +217,10 @@ function showView(name) {
     messages: ["Mensagens", "Continua uma conversa de demonstração.", "CONVERSAS FICTÍCIAS"],
     account: ["O teu perfil", "Explora as opções da demonstração.", "BEM-VINDO AO MOZMATCH"],
   };
-  $("#page-title").textContent = titles[name][0];
-  $("#page-subtitle").textContent = titles[name][1];
-  $("#page-kicker").textContent = titles[name][2];
+  const pageCopy = titles[name] || titles.feed;
+  $("#page-title").textContent = pageCopy[0];
+  $("#page-subtitle").textContent = pageCopy[1];
+  $("#page-kicker").textContent = pageCopy[2];
   if (name === "feed") renderFeed();
   if (name === "discover") renderDiscover();
   if (name === "matches") renderMatches();
